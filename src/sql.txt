@@ -1,0 +1,49 @@
+
+
+CREATE TABLE dvd_user(
+	id int not null primary key auto_increment,
+	username varchar(200),
+	password varchar(200),
+	create_time bigint,
+	status int,
+	a varchar(200),
+	b varchar(200)
+)
+
+select * from dvd_user
+
+
+create table dvd_log(
+	id int not null primary key auto_increment,
+	user_id int,
+	dvd_id int,
+	operate_time bigint,
+	operate_info varchar(200),
+	a varchar(200),
+	b varchar(200)
+)
+select * from dvd_log
+
+
+create table dvd_dvd(
+	id int not null primary key auto_increment,
+	dvdname varchar(200),
+	status int,
+	len_count int,
+	price double,
+	a varchar(200),
+	b varchar(200)
+)
+select * from dvd_dvd
+
+drop table dvd_lend
+
+create table dvd_lend(
+	id int not null primary key auto_increment,
+	dvd_id int,
+	lend_time bigint,
+	status int,
+	a varchar(200),
+	b varchar(200)
+)
+select * from dvd_lend
